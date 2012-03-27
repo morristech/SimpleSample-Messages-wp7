@@ -1,0 +1,29 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="SimpleSample_PushNotification.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="696"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded" Background="Black">
+
+    <!--Пример кода, иллюстрирующий использование ApplicationBar-->
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+         
+            <shell:ApplicationBar.MenuItems>
+            	<shell:ApplicationBarMenuItem x:Name="appBarCreateSubScription" Text="Create subscription" Click="appBarCreateSubScription_Click"/>
+            	<shell:ApplicationBarMenuItem x:Name="appBarGetSubScription" Text="Get subscription" Click="appBarGetSubScription_Click"/>
+            	<shell:ApplicationBarMenuItem x:Name="appBarSendMessage" Text="Send message" Click="appBarSendMessage_Click"/>
+            	<shell:ApplicationBarMenuItem x:Name="appBarRemoveSubscibe" Text="Remove subscription" Click="appBarRemoveSubscibe_Click"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>
